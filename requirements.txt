@@ -1,0 +1,5 @@
+stable_baselines3
+gymnasium[box2d]
+Shimmy
+streamlit
+imageio

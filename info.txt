@@ -1,0 +1,64 @@
+Megerősítéses tanulás demózása
+
+
+Függőségek telepítése:
+
+pip install -r requirements.txt
+
+
+Modell tanítása
+
+lunar_lander_train.py
+A model.learn(total_timesteps=5000) gyorsan lefut; azt érdemes nagyobbra venni: legalább százezerre.
+A tanítás eredménye: lunar_lander_model.zip. A csatolt fájl tanításánál a total_timesteps 5 millió volt.
+
+56m47.788s
+
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 343      |
+|    ep_rew_mean      | 193      |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 13156    |
+|    fps              | 1471     |
+|    time_elapsed     | 3396     |
+|    total_timesteps  | 4999069  |
+| train/              |          |
+|    learning_rate    | 0.0001   |
+|    loss             | 0.711    |
+|    n_updates        | 1249742  |
+----------------------------------
+
+3289 rollout
+
+
+AI demó
+
+play_ai.py 
+
+
+Kipróbálás emberként
+
+start.bat 
+lunar_lander.py 
+
+
+Webalkalmazás
+
+Szükséges fájlok:
+
+packages.txt
+requirements.txt
+app.py
+lunar_lander_model.zip
+lunar_lander_challenge.zip
+README.md
+
+Indítás lokálisan:
+
+streamlit run app.py
+
+Telepítés webre: huggingface.co oldalon Streamlit space létrehozása, majd feltöltés a Files fülön.
+
+https://huggingface.co/spaces/fcsaba/lunarlander/
